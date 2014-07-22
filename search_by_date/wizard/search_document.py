@@ -59,7 +59,7 @@ class search_documents(osv.osv_memory):
         
         active_model = context.get('active_model', False)
         model_obj = self.pool[active_model]
-        ir_model_data = self.pool.get('ir.model.data')
+        ir_model_data = self.pool['ir.model.data']
         if active_model not in DOCUMENTS_DICT:
             raise osv.except_osv(_("Sorry !"), _("Option not available."))
         data = self.browse(cr, uid, ids[0], context=context)
