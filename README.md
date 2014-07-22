@@ -1,4 +1,6 @@
-odoo-addons
-===========
+Módulos personalizados para Odoo
+================================
 
-obertix
+Repositorio de módulos personalizados para el software de gestión integral Odoo.
+
+
