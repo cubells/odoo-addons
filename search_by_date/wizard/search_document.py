@@ -75,9 +75,8 @@ class search_documents(osv.osv_memory):
             raise osv.except_osv(_("No data !"), 
                 _("There is not any document between the date range."))                                 
         return {
-            'name': _(
-                'Documents between %s and %s' % (data.date_from, data.date_to)
-             ),
+            'name': _('Documents between %s and %s' % \
+                        (data.date_from, data.date_to)),
             'view_type': 'form',
             'view_mode': 'form,tree',
             'res_model': active_model,
