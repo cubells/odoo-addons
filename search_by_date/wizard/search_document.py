@@ -35,7 +35,7 @@ DOCUMENTS_DICT = {
     'account.invoice': 'date_invoice',
 }
 
-class search_documents(osv.osv_memory):
+class SearchDocuments(osv.osv_memory):
     """
     This wizard will search documents by date
     """
@@ -76,7 +76,7 @@ class search_documents(osv.osv_memory):
                 _("There is not any document between the date range."))                                 
         return {
             'name': _('Documents between %s and %s' % \
-                        (data.date_from, data.date_to)),
+                                        (data.date_from, data.date_to)),
             'view_type': 'form',
             'view_mode': 'form,tree',
             'res_model': active_model,
@@ -86,4 +86,4 @@ class search_documents(osv.osv_memory):
             'domain':[('id', 'in', model_ids)],
             'type': 'ir.actions.act_window',
         }
-search_documents()
+SearchDocuments()
